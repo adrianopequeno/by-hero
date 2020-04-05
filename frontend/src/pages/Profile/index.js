@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 // React-Icons
 import { FiPower, FiTrash2 } from 'react-icons/fi';
-
 // CSS página de Profile
 import './style.css';
-
 // IMGS
 import logoImg from '../../assets/logo.svg';
 
 export default function Profile() {
+
+  const ongName = localStorage.getItem('ongName');
+
   return (
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="Be The Hero" />
-        <span>Bem vida, ADOTA Patos</span>
+        <span>Bem vida, {ongName}</span>
 
         <Link className="button" to="/incidents/new">Cadastrar novo caso</Link>
         <button type="button">
